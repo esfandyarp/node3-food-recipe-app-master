@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+    <body>
+        {{>header}}
+        <div class="container">
+         {{success}}
+         <p>{{listLength}} recipes available</p>
+
+            <ul class="recipe_list">
+            {{#each files}}
+              <li>
+                <h4><a href="{{this.url}}">{{this.name}}</a></h4>
+              </li>
+            {{/each}}
+            </ul>
+      </div>
+
+      {{>footer}}
+      {{>bootstrapJS}}
+    </body>
+</html>
